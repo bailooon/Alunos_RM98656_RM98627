@@ -1,5 +1,6 @@
 package br.com.gs.alunos_rm98656_rm98627
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -19,15 +20,27 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: EventoViewModel
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
 
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
 
+        val botaoIrParaRm = findViewById<Button>(R.id.buttonIrParaRm)
+
+        botaoIrParaRm.setOnClickListener {
+            val intent = Intent(this, RmActivity::class.java)
+            startActivity(intent)
+        }
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
-                setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar)
         supportActionBar?.title = "Estrela da morte destruida de catástrofes"
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
