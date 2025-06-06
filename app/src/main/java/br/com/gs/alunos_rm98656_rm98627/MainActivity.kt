@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.title = "Estrela da morte destruida de catástrofes"
+        supportActionBar?.title = "Estrela da morte causadora de catástrofes"
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
